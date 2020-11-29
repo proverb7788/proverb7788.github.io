@@ -2,7 +2,7 @@
 sort: 2
 ---
 
-# This is an incredibly long caption for a long menu
+# 学习笔记
 
 ```
 {% raw %}{% include list.liquid all=true %}{% endraw %}
@@ -11,3 +11,4 @@ sort: 2
 ```
 
 {% include list.liquid all=true %}
+
