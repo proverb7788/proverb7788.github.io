@@ -1,3 +1,3 @@
-# I'm folder1
+# 数据类型
 
 source: `{{ page.path }}`
