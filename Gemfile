@@ -1,5 +1,7 @@
-source "https://rubygems.org" # source "https://gems.ruby-china.com"
+source "https://rubygems.org"
 
-gemspec
+# to publish on github page
+gem 'github-pages', group: :jekyll_plugins
 
-gem "github-pages", group: :jekyll_plugins
+# to publich without github page
+#gem "jekyll"
