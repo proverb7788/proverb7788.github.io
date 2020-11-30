@@ -1,13 +1,7 @@
 ---
-sort: 2
+sort: 1
 ---
 
-# 学习笔记
+# 学习交流
 
-```
-{% raw %}{% include list.liquid all=true %}{% endraw %}
-
-{% include list.liquid all=true %}
-```
-
-{% include list.liquid all=true %}
+研发学习交流大家有什么疑问可以联系我
