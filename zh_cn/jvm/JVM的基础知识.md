@@ -1,0 +1,24 @@
+---
+sort : 1
+---
+
+# JVM的基础知识
+
+## JVM 从编译到执行
+
+### Java 程序的执行过程
+
+​		一个 Java 程序，首先经过 javac 编译成 .class 文件，然后 JVM 将其加载到方法区，执行引擎将会执行这些字节码。执行时，会翻译成操作系统相关的函数。JVM 作为 .class 文件的翻译存在，输入字节码，调用操作系统函数。
+​		过程如下：Java 文件->编译器>字节码->JVM->机器码。
+​		JVM 全称 Java Virtual Machine，也就是我们耳熟能详的 Java 虚拟机。它能识别 .class 后缀的文件，并且能够解析它的指令，最终调用操作系统上的函数，完成我们想要的操作。
+
+### JVM, JRE, JDK 的关系
+
+​		JVM 只是一个翻译，把 Class 翻译成机器识别的代码，但是需要注意，JVM 不会自己生成代码，需要大家编写代码，同时需要很多依赖类库，这个时候就需要用到 JRE。
+​		JRE 是什么，它除了包含 JVM 之外，提供了很多的类库（就是我们说的 jar 包，它可以提供一些即插即用的功能，比如读取或者操作文件，连接网络，使用 I/O 等等之类的）这些东西就是 JRE 提供的基础类库。JVM 标准加上实现的一大堆基础类库，就组成了 Java 的运行时环境，也就是我们常说的 JRE（Java Runtime Environment）。
+​		但对于程序员来说，JRE 还不够。我写完要编译代码，还需要调试代码，还需要打包代码、有时候还需要反编译代码。所以我们会使用 JDK，因为 JDK
+还提供了一些非常好用的小工具，比如 javac（编译代码）、java、jar （打包代码）、javap（反编译<反汇编>）等。这个就是 JDK。
+具体可以文档可以通过官网去下载：[https://www.oracle.com/java/technologies/javase-jdk8-doc-downloads.html](https://www.oracle.com/java/technologies/javase-jdk8-doc-downloads.html)
+JVM 的作用是：从软件层面屏蔽不同操作系统在底层硬件和指令的不同。这个就是我们在宏观方面对 JVM 的一个认识。
+同时 JVM  是一个虚拟化的操作系统 ， 类似于 Linux  或者 Windows  的操作系统 ， 只是它架在操作系统上 ， 接收字节码也就是 class ， 把字节码翻译成操作系统上的
+机器码且进行执行。
