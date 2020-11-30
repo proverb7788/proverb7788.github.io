@@ -19,7 +19,7 @@
                 {%- for block in blocks -%}
                     <li class="breadcrumb-item" {% if forloop.last %}aria-current="page"{% endif %}>
                         {%- if forloop.last -%}
-                            {{ page.name }}
+                            {{ page.name.replace(".md","").replace(".MD","") }}
                         {%- else -%}
                             <a href="{{ site.baseurl }}/{% for block in blocks limit: forloop.index %}{{ block }}/{% endfor %}">{{ block }}</a>
                         {%- endif -%}
@@ -27,7 +27,4 @@
                 {%- endfor -%}
         {%- endcase -%}
     </ul>
-    <a class="edit" href="{% github_edit_link %}" title="{{ __.edit | default: 'Edit on GitHub'}}" rel="noreferrer" target="_blank">
-        <i class="fa fa-edit"></i>
-    </a>
 </div>
